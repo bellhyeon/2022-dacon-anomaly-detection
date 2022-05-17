@@ -16,6 +16,5 @@ class PytorchEfficientNet(Model):
         )
 
     def forward(self, src, tgt=None):
-        # pylint: disable=invalid-name
         x = self.model(src)
         return x

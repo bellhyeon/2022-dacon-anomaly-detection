@@ -16,7 +16,5 @@ class TimmClassificationModel(Model):
         )
 
     def forward(self, src, tgt=None):
-        # pylint: disable=invalid-name
         x = self.model.forward(src)
-
         return x

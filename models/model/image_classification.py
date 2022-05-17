@@ -3,7 +3,6 @@ import timm
 from models.model.models import Model
 
 
-# pylint: disable=invalid-name
 @Model.register("image_classification")
 class ImageClassificationModel(Model):
     def __init__(self, **kwargs):
