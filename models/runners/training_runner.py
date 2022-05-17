@@ -16,7 +16,7 @@ import torch.nn as nn
 from utils.mixup import mixup_data, mixup_criterion
 from utils.cutmix import cutmix_data
 
-from constant import LABEL_DICT, LABEL_DECODE_DICT
+from constant import LABEL_DICT
 
 
 def _save_loss_graph(save_folder_path: str, train_loss: List, valid_loss: List):
