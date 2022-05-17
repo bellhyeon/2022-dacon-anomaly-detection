@@ -8,14 +8,8 @@ from albumentations import (
     Resize,
     HorizontalFlip,
     VerticalFlip,
-    Rotate,
-    RandomRotate90,
-    OneOf,
     ShiftScaleRotate,
     Transpose,
-    RandomBrightnessContrast,
-    ColorJitter,
-    HueSaturationValue,
 )
 
 from albumentations.pytorch import ToTensorV2
@@ -26,16 +20,10 @@ def _get_transforms(use_augmentation: bool, img_size: int):
     if use_augmentation:
         return Compose(
             [
-                # ColorJitter(brightness=0.1, contrast=0.1, saturation=0.1, hue=0.1, p=0.5),
-                # HueSaturationValue(hue_shift_limit=0.2, sat_shift_limit=0.2, val_shift_limit=0.2, p=0.2),
                 Transpose(p=0.5),
                 HorizontalFlip(p=0.5),
                 VerticalFlip(p=0.5),
-                # ShiftScaleRotate(rotate_limit=30, p=0.5, border_mode=cv2.BORDER_CONSTANT),
-                # ShiftScaleRotate(p=0.5),
-                RandomBrightnessContrast(
-                    brightness_limit=(-0.1, 0.1), contrast_limit=(-0.1, 0.1), p=0.5
-                ),
+                ShiftScaleRotate(rotate_limit=(-30, 30), p=0.5, border_mode=cv2.BORDER_CONSTANT),
                 Resize(img_size, img_size),
                 Normalize(
                     mean=[0.485, 0.456, 0.406],
