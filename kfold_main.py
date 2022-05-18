@@ -8,7 +8,6 @@ from sklearn.model_selection import StratifiedKFold
 from data.dataset import AnomalyDataset
 from utils.get_path import load_path
 from data.data_loader import get_data_loader
-from models.model.models import Model
 from utils.get_path import get_save_kfold_model_path
 
 from models.model.models import Model
