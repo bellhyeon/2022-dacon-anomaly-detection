@@ -106,23 +106,23 @@ if __name__ == "__main__":
     args.add_argument("--epochs", type=int, default=70)
     args.add_argument("--max_grad_norm", type=float, default=1.0)
     args.add_argument("--img_size", type=int, default=528)
-    args.add_argument("--num_workers", type=int, default=5)
+    args.add_argument("--num_workers", type=int, default=8)
     args.add_argument("--model_name", type=str, default="timm_classification")
     args.add_argument("--label_smoothing", type=float, default=0.1)
     args.add_argument("--device", type=int, default=0)
     args.add_argument(
         "--save_model_path",
         type=str,
-        default="models/saved_model/1/*/f1_best.pt",
+        default="models/saved_model/BEST/*/f1_best.pt",
     )
     args.add_argument(
         "--save_folder_path",
         type=str,
-        default="models/saved_model/1/",
+        default="models/saved_model/BEST/",
     )
-    args.add_argument("--mixup", type=str2bool, default="True")
+    args.add_argument("--mixup", type=str2bool, default="False")
     args.add_argument(
-        "--mixup_epochs", type=int, default=30, help="epochs to train with mixup"
+        "--mixup_epochs", type=int, default=0, help="epochs to train with mixup"
     )
     args.add_argument("--cutmix", type=str2bool, default="False")
     args.add_argument(
@@ -139,7 +139,7 @@ if __name__ == "__main__":
 
     # ===========================================================================
     test_img_paths = load_path(TEST_IMAGE_PATH, train=False)
-    print(test_img_paths)
+    print(test_img_paths[:5])
     print(f"test_img_paths : {len(test_img_paths)}")
 
     infer_results = []
