@@ -113,12 +113,12 @@ if __name__ == "__main__":
     args.add_argument(
         "--save_model_path",
         type=str,
-        default="models/saved_model/BEST/*/f1_best.pt",
+        default="models/saved_model/1/*/f1_best.pt",
     )
     args.add_argument(
         "--save_folder_path",
         type=str,
-        default="models/saved_model/BEST/",
+        default="models/saved_model/1/",
     )
     args.add_argument("--mixup", type=str2bool, default="False")
     args.add_argument(
