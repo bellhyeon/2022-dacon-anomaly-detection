@@ -3,7 +3,7 @@
 <br>[Competition Link](https://dacon.io/competitions/official/235894/overview/description)
 * 주최 / 주관: Dacon
 * **Private 11th, Score 0.8830**
-* **Final 9th**
+* **Final 9th (9/481, 2%)**
 ***
 
 ## Structure
