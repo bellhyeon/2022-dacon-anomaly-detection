@@ -2,7 +2,8 @@
 불균형 데이터 셋을 학습하여 사물의 상태를 잘 분류할 수 있는 알고리즘 개발
 <br>[Competition Link](https://dacon.io/competitions/official/235894/overview/description)
 * 주최 / 주관: Dacon
-* **Private 11th, Score 0.88305 (11/481, 2.5%)**
+* **Private 11th, Score 0.8830**
+* **Final 9th
 ***
 
 ## Structure
