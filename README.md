@@ -48,7 +48,7 @@ sh install_dependency.sh
 ### Train
 * Fine-Tuned timm tf_efficientnet_b6
 * Image Size (528x528)
-* Focal Loss (alpha=0.25, gammap=5.0) with Label Smoothing (0.1)
+* Focal Loss (alpha=0.25, gamma=5.0) with Label Smoothing (0.1)
 * Trained for 70 epochs
 * 5 StratifiedKFold train
 * Train 30 epochs with mixup, trained remaining epochs without mixup
